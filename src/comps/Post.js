@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 class CommPost extends React.Component {
   // constructor(props) {
@@ -8,7 +9,7 @@ class CommPost extends React.Component {
   render() {
     return (
       <li>
-        <a href={"/post/" + this.props.id}>{this.props.title}</a>
+        <Link to={"/post/" + this.props.id}>{this.props.title}</Link>
         <date>{this.props.date}</date>
       </li>
     );

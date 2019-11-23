@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import {Route, HashRouter } from 'react-router-dom';
 import Posts from "./Posts"
 import Post from "./Post"
 
 const routing = (
-  <Router>
+  <HashRouter basename={process.env.PUBLIC_URL+"/"}>
     <div>
       <Route exact path="/" component={Posts} />
       <Route path="/post/:id" component={Post} />
     </div>
-  </Router>
+  </HashRouter>
 )
 
 ReactDOM.render(routing, document.querySelector("#root"));
